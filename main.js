@@ -316,7 +316,7 @@ function runCcode() {
       }
     ]
   };
-   if(ithn+ipoin+ispn<1){
+   if(sthn+spoin+sspn<1){
     var plotlyData = RPDsData;
     var plotlyLayout = { 
       xaxis: {title: 'Number of photons'},
