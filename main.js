@@ -230,7 +230,7 @@ function runCcode() {
   var RPDiData = {
     x: xValues,
     y: iValues,
-    orientation: "h",
+    //orientation: "h",
     name: "PND #1",
     marker: { color: "rgb(102,0,0)" },
     xaxis: "Number of photons",
