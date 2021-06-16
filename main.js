@@ -263,7 +263,7 @@ function runCcode() {
       window.innerWidth
     ))); */
 
-  var plotlyLayout = {barmode: 'group'};
+  
       /*{
     title: "Photon Number Distributions (PNDs)",
     showlegend: false,
@@ -303,8 +303,7 @@ function runCcode() {
       color: "#000"
     }
   };*/
-
-  var plotlyData = [/*jpdData,*/RPDsData, RPDiData];
+  
   var plotlyButtons = {
     modeBarButtonsToRemove: ["toImage", "sendDataToCloud"],
     modeBarButtonsToAdd: [
@@ -317,6 +316,13 @@ function runCcode() {
       }
     ]
   };
+  if(ithn+ipoin+ispn<1){
+    var plotlyData = RPDsData;
+    var plotlyLayout = "";
+  }else [
+    var plotlyData = [RPDsData, RPDiData];
+    var plotlyLayout = {barmode: 'group'};
+  }
   Plotly.newPlot("plotlyDiv", plotlyData, plotlyLayout, plotlyButtons);
 
   cFree(pp);
