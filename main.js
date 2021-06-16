@@ -318,13 +318,17 @@ function runCcode() {
   };
    if(ithn+ipoin+ispn<1){
     var plotlyData = RPDsData;
-    Plotly.newPlot("plotlyDiv", plotlyData, plotlyButtons);
-
-  }else{
+    var plotlyLayout = { 
+      xaxis: {title: 'Number of photons'},
+      yaxis: {title: 'Probability'}};
+   }else{
     var plotlyData = [RPDiData,RPDsData];
-    var plotlyLayout = {barmode: 'group'};
-    Plotly.newPlot("plotlyDiv", plotlyData, plotlyLayout, plotlyButtons);
+    var plotlyLayout = {
+      xaxis: {title: 'Number of photons'},
+      yaxis: {title: 'Probability'},
+      barmode: 'group'};
   }
+  Plotly.newPlot("plotlyDiv", plotlyData, plotlyLayout, plotlyButtons);
   
   cFree(pp);
   cFree(xinit);
