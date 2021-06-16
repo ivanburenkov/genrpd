@@ -105,9 +105,16 @@
               
             </a>
           </h6>
-            <li>
+             <li class="nav-item">
+            <a class="nav-link" href="#SignalSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+              <span data-feather="arrow-up-right"></span>First source
+              <span class="fa-chevron-right" data-feather="chevron-right"></span>
+              <span class="fa-chevron-down" data-feather="chevron-down"></span>
+            </a>
+              <ul class="collapse list-unstyled" id="SignalSubmenu">
+                <li>
                   <a class="nav-link" href="#" 
-                  title="Add thermal mode to the light source"
+                  title="Add a thermal mode to the source"
                   >
                   <span>Thermal</span>
                   <span
@@ -121,7 +128,7 @@
                 </li>
                 <li>
                   <a class="nav-link" href="#" 
-                  title="Add Poisson mode to the light source"
+                  title="Add a Poisson mode to the source"
                   >
                   <span>Poisson</span>
                   <span
@@ -135,7 +142,7 @@
                 </li>
                 <li>
                   <a class="nav-link" href="#" 
-                  title="Add single-photon mode to the light source"
+                  title="Add a single-photon mode to the source"
                   >
                   <span>Single-photon</span>
                   <span
@@ -145,6 +152,57 @@
                   
                 </a>
                 <ol id="ssp-sources">
+                </ol>
+                </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#IdlerSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+              <span data-feather="arrow-down-right"></span>Second source
+              <span class="fa-chevron-right" data-feather="chevron-right"></span>
+              <span class="fa-chevron-down" data-feather="chevron-down"></span>
+            </a>
+              <ul class="collapse list-unstyled" id="IdlerSubmenu">
+                <li>
+                  <a class="nav-link" href="#" 
+                  title="Add a thermal mode to the source"
+                  >
+                  <span>Thermal</span>
+                  <span
+                    data-feather="plus-circle" 
+                    onclick="addIdlerThermalMode();return false;">
+                  </span>
+                  
+                </a>
+                <ol id="ithermal-sources">
+                </ol>
+                </li>
+                <li>
+                  <a class="nav-link" href="#" 
+                  title="Add a Poisson mode to the source"
+                  >
+                  <span>Poisson</span>
+                  <span
+                    data-feather="plus-circle" 
+                    onclick="addIdlerPoissonMode();return false;">
+                  </span>
+                  
+                </a>
+                <ol id="ipoisson-sources">
+                </ol>
+                </li>
+                <li>
+                  <a class="nav-link" href="#" 
+                  title="Add a single-photon mode to the source"
+                  >
+                  <span>Single-photon</span>
+                  <span
+                    data-feather="plus-circle" 
+                    onclick="addIdlerSPMode();return false;">
+                  </span>
+                  
+                </a>
+                <ol id="isp-sources">
                 </ol>
                 </li>
             </ul>
