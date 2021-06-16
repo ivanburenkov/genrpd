@@ -166,8 +166,8 @@ function runCcode() {
     j = i - (cthn + cpoin + cspn + sthn + sspn + spoin + ithn + ispn);
     xinit.data[i] = document.getElementById("ipoi" + j).value;
   }
-  xinit.data[p - 2] = document.getElementById("iLoss").value;
-  xinit.data[p - 1] = document.getElementById("sLoss").value;
+  xinit.data[p - 2] = 1;//document.getElementById("iLoss").value;
+  xinit.data[p - 1] = 1;//document.getElementById("sLoss").value;
 
   let nn = 21;
   z = cArray(nn * nn);
