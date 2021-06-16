@@ -318,13 +318,14 @@ function runCcode() {
   };
    if(ithn+ipoin+ispn<1){
     var plotlyData = RPDsData;
-    var plotlyLayout = "";
+    Plotly.newPlot("plotlyDiv", plotlyData, plotlyButtons);
+
   }else{
     var plotlyData = [RPDiData,RPDsData];
     var plotlyLayout = {barmode: 'group'};
+    Plotly.newPlot("plotlyDiv", plotlyData, plotlyLayout, plotlyButtons);
   }
-  Plotly.newPlot("plotlyDiv", plotlyData, plotlyLayout, plotlyButtons);
-
+  
   cFree(pp);
   cFree(xinit);
   cFree(z);
