@@ -228,20 +228,22 @@ function runCcode() {
     }
   }
   var RPDiData = {
-    y: xValues,
-    x: iValues,
+    x: xValues,
+    y: iValues,
     orientation: "h",
-    name: "Idler arm PND",
+    name: "PND #1",
     marker: { color: "rgb(102,0,0)" },
-    xaxis: "x2",
+    xaxis: "Number of photons",
+    yaxis: "Probability",
     type: "bar"
   };
   var RPDsData = {
     x: xValues,
     y: sValues,
-    name: "Signal arm PND",
+    name: "PND #2",
     marker: { color: "rgb(0,0,102)" },
-    yaxis: "y2",
+    xaxis: "Number of photons",
+    yaxis: "Probability",
     type: "bar"
   };
   var bb = document.getElementById("sidebarMenu").getBoundingClientRect();
