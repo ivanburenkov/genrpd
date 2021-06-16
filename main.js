@@ -316,7 +316,7 @@ function runCcode() {
       }
     ]
   };
-  if(ithn+ipoin+ispn<1){
+   if(ithn+ipoin+ispn<1){
     var plotlyData = RPDsData;
     var plotlyLayout = "";
   }else{
