@@ -319,7 +319,7 @@ function runCcode() {
   if(ithn+ipoin+ispn<1){
     var plotlyData = RPDsData;
     var plotlyLayout = "";
-  }else [
+  }else{
     var plotlyData = [RPDiData,RPDsData];
     var plotlyLayout = {barmode: 'group'};
   }
