@@ -320,7 +320,7 @@ function runCcode() {
     var plotlyData = RPDsData;
     var plotlyLayout = "";
   }else [
-    var plotlyData = [RPDsData, RPDiData];
+    var plotlyData = [RPDiData,RPDsData];
     var plotlyLayout = {barmode: 'group'};
   }
   Plotly.newPlot("plotlyDiv", plotlyData, plotlyLayout, plotlyButtons);
