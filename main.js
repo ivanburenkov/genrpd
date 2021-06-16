@@ -60,7 +60,7 @@ Module["onRuntimeInitialized"] = function () {
   runCcode();
 };
 
-var cthn = 1;
+var cthn = 0;
 var cpoin = 0;
 var cspn = 0;
 var ithn = 0;
