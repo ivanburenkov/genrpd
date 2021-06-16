@@ -3,11 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=1024">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-    <!-- <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.83.1"> -->
-    <title>JPD generator</title>
+    <title>PND generator</title>
 
     <style>html {
       /* default font-size is 16px - this is set in the default browser stylesheet */ 
@@ -95,43 +91,7 @@
       autocomplete="off"
       >References</button>
     </span>
-    <!-- <span id="expandedHelp">
-      <button type="button" 
-      class="btn btn-secondary active hideHelp" 
-      data-bs-toggle="button"
-      data-toggle="collapse" 
-      href="#help" 
-      role="button" aria-expanded="true" 
-      aria-controls="help" 
-      autocomplete="off"
-      onclick="hideID('collapsed');hideID('expandedHelp');">Collapse
-      </button>
-    </span>
-    <span id="expandedRefs">
-      <button type="button" 
-      class="btn btn-secondary active hideRefs" 
-      data-bs-toggle="button"
-      data-toggle="collapse" 
-      href="#refs" 
-      role="button" aria-expanded="true" 
-      aria-controls="refs" 
-      autocomplete="off"
-      onclick="hideID('collapsed');hideID('expandedRefs');">Collapse
-      </button>
-    </span> -->
   </div>
-
-  <!-- <ul class="navbar-nav px-3">
-    <li class="nav-item text-nowrap">
-      <a class="nav-link" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">First text</a>
-    </li>
-  </ul>
-  <ul class="navbar-nav px-3">
-    <li class="nav-item text-nowrap">
-      <a class="nav-link" data-toggle="collapse" href="#multiCollapseExample2" role="button" aria-expanded="false" aria-controls="multiCollapseExample2">Second text</a>
-    </li>
-  </ul>
- -->
 </header>
 
 <div class="container-fluid">
@@ -139,101 +99,13 @@
     <nav id="sidebarMenu" class="col-md-4 col-lg-2 d-md-block bg-light sidebar collapse">
       <div class="position-sticky pt-3">
         <ul class="nav flex-column">
-          <!-- <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">
-              <span data-feather="home"></span>
-              Dashboard
-            </a>
-          </li> -->
           <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
             <span>Light sources</span>
             <a class="link-secondary" href="#" aria-label="Add a new report">
               
             </a>
           </h6>
-          <li class="nav-item">
-              <a class="nav-link" href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                <span data-feather="shuffle"></span>Conjugated
-                <span class="fa-chevron-right" data-feather="chevron-right"></span>
-                <span class="fa-chevron-down" data-feather="chevron-down"></span>
-              </a>
-                <ul class="collapse list-unstyled" id="homeSubmenu">
-                  <li>
-                    <a class="nav-link" href="#" 
-                    title="Add conjugated thermal mode (Squeezed vacuum mode)"
-                    >
-                    <span>Thermal</span>
-                    <span
-                      data-feather="plus-circle" 
-                      onclick="addConjugatedThermalMode();return false;">
-                    </span>
-                    
-                  </a>
-                  <ol id="thermal-sources">
-                    <li id="cthli0">
-                      <div class="input-group" title="Enter average number of photons in this mode.">
-                        <input id="cth0"
-                          class="form-control form-control-light w-5" 
-                          type="number" 
-                          style="width: 30%; display:inline;margin-right: 2%;"
-                          min=0
-                          value="1" 
-                          aria-label="Thermal"
-                          class="form-inline"
-                          onchange="runCcode();return false;">
-                        <div class="input-group-append">
-                            <span class="input-group-text" 
-                            title="averge number of photons"> ph </span>
-                        </div>
-                        <a style="padding:5px" 
-                          class="nav-link" 
-                          href="#" 
-                          title="Remove this source." 
-                          onclick="delConjugatedThermalMode('0');return false;">
-                          <span style="margin:5%" data-feather="minus-circle"></span>
-                        </a>
-                      </div>
-                    </li>
-                  </ol>
-                  </li>
-                  <li>
-                    <a class="nav-link" href="#" 
-                    title="Add conjugated Poisson mode"
-                    >
-                    <span>Poisson</span>
-                    <span
-                      data-feather="plus-circle" 
-                      onclick="addConjugatedPoissonMode();return false;">
-                    </span>
-                    
-                  </a>
-                  <ol id="poisson-sources">
-                  </ol>
-                  </li>
-                  <li>
-                    <a class="nav-link" href="#" 
-                    title="Add conjugated single-photon mode (ideal biohoton source)"
-                    >
-                    <span>Single-photon</span>
-                    <span
-                      data-feather="plus-circle" 
-                      onclick="addConjugatedSPMode();return false;">
-                    </span>
-                    
-                  </a>
-                  <ol id="sp-sources">
-                  </ol>
-                  </li>
-              </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#SignalSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-              <span data-feather="arrow-up-right"></span>Signal
-              <span class="fa-chevron-right" data-feather="chevron-right"></span>
-              <span class="fa-chevron-down" data-feather="chevron-down"></span>
-            </a>
-              <ul class="collapse list-unstyled" id="SignalSubmenu">
-                <li>
+            <li>
                   <a class="nav-link" href="#" 
                   title="Add signal thermal mode"
                   >
@@ -277,98 +149,7 @@
                 </li>
             </ul>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#IdlerSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-              <span data-feather="arrow-down-right"></span>Idler
-              <span class="fa-chevron-right" data-feather="chevron-right"></span>
-              <span class="fa-chevron-down" data-feather="chevron-down"></span>
-            </a>
-              <ul class="collapse list-unstyled" id="IdlerSubmenu">
-                <li>
-                  <a class="nav-link" href="#" 
-                  title="Add signal thermal mode"
-                  >
-                  <span>Thermal</span>
-                  <span
-                    data-feather="plus-circle" 
-                    onclick="addIdlerThermalMode();return false;">
-                  </span>
-                  
-                </a>
-                <ol id="ithermal-sources">
-                </ol>
-                </li>
-                <li>
-                  <a class="nav-link" href="#" 
-                  title="Add Idler Poisson mode"
-                  >
-                  <span>Poisson</span>
-                  <span
-                    data-feather="plus-circle" 
-                    onclick="addIdlerPoissonMode();return false;">
-                  </span>
-                  
-                </a>
-                <ol id="ipoisson-sources">
-                </ol>
-                </li>
-                <li>
-                  <a class="nav-link" href="#" 
-                  title="Add conjugated single-photon mode (ideal biohoton source)"
-                  >
-                  <span>Single-photon</span>
-                  <span
-                    data-feather="plus-circle" 
-                    onclick="addIdlerSPMode();return false;">
-                  </span>
-                  
-                </a>
-                <ol id="isp-sources">
-                </ol>
-                </li>
-            </ul>
-          </li>
-          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-            <span>Detection Efficiency (Conjugated modes)</span>
-            
-            <a class="link-secondary" href="#" aria-label="Add a new report">
-              
-            </a>
-          </h6>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="aperture"></span>
-              Signal mode
-              <input id="sLoss"
-                          class="form-control form-control-light w-5" 
-                          type="number" 
-                          style="width: 40%; display:inline;margin-right: 2%;"
-                          min=0
-                          max=1
-                          step=0.1
-                          value="1" 
-                          aria-label="Loss"
-                          class="form-inline"
-                          onchange="runCcode();return false;">
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="aperture"></span>
-              Idler mode
-              <input id="iLoss"
-                          class="form-control form-control-light w-5" 
-                          type="number" 
-                          style="width: 40%; display:inline;margin-right: 2%;"
-                          min=0
-                          max=1
-                          step=0.1
-                          value="1" 
-                          aria-label="Loss"
-                          class="form-inline"
-                          onchange="runCcode();return false;">
-            </a>
-          </li>
+          
           <!-- 
           <li class="nav-item">
             <a class="nav-link" href="#">
