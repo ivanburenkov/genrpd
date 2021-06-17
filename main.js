@@ -285,12 +285,15 @@ function runCcode() {
   
    if(ithn+ipoin+ispn<1){
     var plotlyData = [RPDiData];
-    var plotlyLayout = { 
+    var plotlyLayout = {
+      title: "Photon Number Distribution",
       xaxis: {title: 'Number of photons'},
-      yaxis: {title: 'Probability'}};
+      yaxis: {title: 'Probability'}
+    };
    }else{
     var plotlyData = [RPDiData,RPDsData];
     var plotlyLayout = {
+      title: "Comparison of Photon Number Distributions",
       xaxis: {title: 'Number of photons'},
       yaxis: {title: 'Probability'},
       barmode: 'group'};
