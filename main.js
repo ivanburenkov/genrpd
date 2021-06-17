@@ -317,8 +317,8 @@ function runCcode() {
     ]
   };
   
-   if(sthn+spoin+sspn<1){
-    var plotlyData = [RPDsData];
+   if(ithn+ipoin+ispn<1){
+    var plotlyData = [RPDiData];
     var plotlyLayout = { 
       xaxis: {title: 'Number of photons'},
       yaxis: {title: 'Probability'}};
