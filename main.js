@@ -169,7 +169,7 @@ function runCcode() {
   xinit.data[p - 2] = 1;//document.getElementById("iLoss").value;
   xinit.data[p - 1] = 1;//document.getElementById("sLoss").value;
 
-  let nn = 21;
+  let nn = 63;
   z = cArray(nn * nn);
 
   genJpd(pp.offset, xinit.offset, z.offset, nn);
@@ -201,8 +201,6 @@ function runCcode() {
     }
   }
 
-  document.getElementById("datatsv").value = tsvJPDValues;
-
   var jpdData = {
     z: zValues,
     x: xValues,
@@ -217,7 +215,7 @@ function runCcode() {
   jpdrpd(z.offset, rpd.offset, nn);
   var iValues = [];
   var sValues = [];
-  for (i = 0; i < width; i++) {
+  for (i = 0; i < 21; i++) {
     iValues[i] = rpd.data[i];
     sValues[i] = rpd.data[i + width];
     if (j == width - 1) {
@@ -227,6 +225,9 @@ function runCcode() {
         tsvRPDValues + i + "\t" + sValues[i] + "\t" + iValues[i] + "\n";
     }
   }
+  
+  document.getElementById("datatsv").value = tsvRPDValues;
+  
   var RPDiData = {
     x: xValues,
     y: iValues,
@@ -258,52 +259,7 @@ function runCcode() {
     );
   }
   let screenwidth = getViewport();
-  /* alert(Math.floor(Math.max(
-      window.innerWidth*window.devicePixelRatio,
-      window.innerWidth
-    ))); */
-
-  
-      /*{
-    title: "Photon Number Distributions (PNDs)",
-    showlegend: false,
-    autosize: false,
-    width: screenwidth, //-sidebarwidth-100,//Math.floor(screenwidth*0.6),
-    height: screenwidth, //-sidebarwidth-150,//Math.floor(screenwidth*0.6)-50,
-    margin: { t: 100 },
-    hovermode: "closest",
-    bargap: 0.1,
-    xaxis: {
-      domain: [0, 0.84],
-      showgrid: false,
-      showline: true,
-      title: "Signal number of photons",
-      zeroline: false
-    },
-    yaxis: {
-      domain: [0, 0.84],
-      showgrid: false,
-      showline: true,
-      title: "Idler number of photons",
-      zeroline: false
-    },
-    xaxis2: {
-      domain: [0.86, 1],
-      showgrid: true //,
-      //zeroline: false
-    },
-    yaxis2: {
-      domain: [0.86, 1],
-      showgrid: true //,
-      //zeroline: false
-    },
-    font: {
-      family: "Arial",
-      size: Math.floor(screenwidth / 40), //((screenwidth-sidebarwidth-100)/50),
-      color: "#000"
-    }
-  };*/
-  
+    
   var plotlyButtons = {
     modeBarButtonsToRemove: ["toImage", "sendDataToCloud"],
     modeBarButtonsToAdd: [
