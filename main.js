@@ -215,14 +215,24 @@ function runCcode() {
   jpdrpd(z.offset, rpd.offset, nn);
   var iValues = [];
   var sValues = [];
-  for (i = 0; i < 21; i++) {
+  var datann=21;
+  for (i = 0; i < datann; i++) {
     iValues[i] = rpd.data[i];
     sValues[i] = rpd.data[i + width];
-    if (j == width - 1) {
-      tsvRPDValues = tsvRPDValues + i + "\t" + sValues[i] + "\t" + iValues[i];
-    } else {
-      tsvRPDValues =
-        tsvRPDValues + i + "\t" + sValues[i] + "\t" + iValues[i] + "\n";
+    if(ithn+ipoin+ispn<1){
+      if (j == datann-1) {
+        tsvRPDValues = tsvRPDValues + i + "\t" + iValues[i];
+      } else {
+        tsvRPDValues =
+          tsvRPDValues + i + "\t" + iValues[i]+"\n";
+      }
+    }else{
+      if (j == datann-1) {
+        tsvRPDValues = tsvRPDValues + i + "\t" + iValues[i] + "\t" + sValues[i];
+      } else {
+        tsvRPDValues =
+          tsvRPDValues + i + "\t" + iValues[i] + "\t" + sValues[i] + "\n";
+      } 
     }
   }
   
