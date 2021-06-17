@@ -316,9 +316,9 @@ function runCcode() {
       }
     ]
   };
-  /*
+  
    if(sthn+spoin+sspn<1){
-    var plotlyData = RPDsData;
+    var plotlyData = [RPDsData];
     var plotlyLayout = { 
       xaxis: {title: 'Number of photons'},
       yaxis: {title: 'Probability'}};
@@ -329,9 +329,7 @@ function runCcode() {
       yaxis: {title: 'Probability'},
       barmode: 'group'};
   }
-  */
-  Plotly.newPlot("plotlyDiv", RPDsData);
-//  Plotly.newPlot("plotlyDiv", plotlyData, plotlyLayout, plotlyButtons);
+  Plotly.newPlot("plotlyDiv", plotlyData, plotlyLayout, plotlyButtons);
   
   cFree(pp);
   cFree(xinit);
